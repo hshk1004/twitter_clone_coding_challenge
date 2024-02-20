@@ -13,7 +13,7 @@ make wireframe
 sun - tue
 
 make socal login
-
+ 
 wed - fri
 
 real time posting
