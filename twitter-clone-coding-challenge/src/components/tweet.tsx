@@ -94,23 +94,23 @@ export default function Tweet({ username, photo, tweet, userId, id }: ITweet) {
         <Wrapper>
 
             <Column>
-            <Username>
-                {username}
-            </Username>
+                <Username>
+                    {username}
+                </Username>
 
-            <Payload>
-                {tweet}
-            </Payload>
-            {user?.uid === userId ? (
-                <>
-                    <DeleteButton onClick={onDelete}>
-                        삭제하기
-                    </DeleteButton>
-                    <UpdateButton onClick={onUpdate}>
-                        수정하기
-                    </UpdateButton>
-                </>
-            ) : null}
+                <Payload>
+                    {tweet}
+                </Payload>
+                {user?.uid === userId ? (
+                    <>
+                        <DeleteButton onClick={onDelete}>
+                            삭제하기
+                        </DeleteButton>
+                        <UpdateButton onClick={onUpdate}>
+                            수정하기
+                        </UpdateButton>
+                    </>
+                ) : null}
             </Column>
             
             {photo ? (
@@ -118,6 +118,13 @@ export default function Tweet({ username, photo, tweet, userId, id }: ITweet) {
                 <Photo src={photo} />
             </Column>
             ) : null}
+
+                
+            {/* 댓글, 좋아요, 리트윗, 공유 */}
+            <Column>
+                
+            </Column>
+
         </Wrapper>
     );
 }

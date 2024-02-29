@@ -38,10 +38,7 @@ const router = createBrowserRouter([
 ])
 
 const GlobalStyles = createGlobalStyle`
-  ${onreset};
-  * {
-    box-sizing: border-box;
-  }
+  
   body {
     background-color: black;
     color:white;
@@ -58,7 +55,7 @@ const Wrapper = styled.div`
 
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [, setIsLoading] = useState(true);
   const init = async() => {
     // wait firebase
     await auth.authStateReady();
@@ -72,17 +69,7 @@ function App() {
   return (
     <>
       <Wrapper>
-        <GlobalStyles bubbles={false} cancelBubble={false} cancelable={false} composed={false} currentTarget={null} defaultPrevented={false} eventPhase={0} isTrusted={false} returnValue={false} srcElement={null} target={null} timeStamp={0} type={""} composedPath={function (): EventTarget[] {
-          throw new Error("Function not implemented.")
-        } } initEvent={function (type: string, bubbles?: boolean | undefined, cancelable?: boolean | undefined): void {
-          throw new Error("Function not implemented.")
-        } } preventDefault={function (): void {
-          throw new Error("Function not implemented.")
-        } } stopImmediatePropagation={function (): void {
-          throw new Error("Function not implemented.")
-        } } stopPropagation={function (): void {
-          throw new Error("Function not implemented.")
-        } } NONE={0} CAPTURING_PHASE={1} AT_TARGET={2} BUBBLING_PHASE={3} />
+        <GlobalStyles />
         <RouterProvider router={router} />
       </Wrapper>
     </> 
